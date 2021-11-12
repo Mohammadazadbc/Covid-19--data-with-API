@@ -5,15 +5,18 @@ const countrys =[];
 
 fetch('https://coronavirus.m.pipedream.net/')
 .then(data=>data.json())
-.then(resp => countrys.push(...resp.rawData));
-
+.then((resp)=>{
+    document.getElementById('confirmed').innerHTML = "Confirmed: "+resp.summaryStats.global.confirmed;
+    document.getElementById('death').innerHTML = "Deaths: "+resp.summaryStats.global.deaths;
+    return countrys.push(...resp.rawData)
+});
 
 
 
 function findValue(userType, array){
     return array.filter(val=>{
         const regex = new RegExp(userType,'gi');
-        return val.Country_Region.match(regex)
+        return val.Country_Region.match(regex) || val.Province_State.match(regex)
     })
 }
 
@@ -31,7 +34,7 @@ function showResult(){
         <br>
         `
     });
-    result.innerHTML = tab;
+    result.innerHTML = tab.join('');
 
 }
 

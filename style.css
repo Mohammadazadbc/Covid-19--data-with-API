@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    box-sizing:border-box;
+    padding: 0;
+    color: white;
+    
+  
+}
+
+body{
+    width: 100%;
+    height: 200vh;
+    background-image: url('./images/covid.jpg.jpeg');
+    background-position: center;
+    background-size: cover
+};
+
+.container{
+    width: 100%;
+    height: 100%;
+   
+}
+
+#input{
+    width: 70%;
+    position: relative;
+    left: 15%;
+    padding: 15px 5px;
+    margin: 2rem 0;
+    color: black;
+    background-color: white;
+    font-size: 20px;
+    border-radius: 3px;
+
+}
+
+h2{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h2 span{
+    font-size: 20px;
+}
+nav{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    box-shadow: 1px 1px 5px white;
+    align-items: center;
+    margin: 0rem 0;
+    padding: 20px 0;
+    background-color: rgb(112, 6, 6);
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+ul{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+
+}
+
+ul div{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    text-align: center;
+    box-shadow: 1px 1px 5px white;
+    align-items: center;
+    margin: 5px 0;
+    padding: 15px 0;
+    background-color: rgb(126, 34, 34);
+}
+
+
+
+ul div span{
+    font-size: 25px;
+}
